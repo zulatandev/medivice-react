@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-select label:before {
+  display: none;
+}
+
+.custom-select label:after {
+  display: none;
+}
+
+/*::-webkit-scrollbar {*/
+/*  width: 9px;*/
+/*  height: 6px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*  background: #141625;*/
+/*  border-radius: 10px;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*  background: #1E2139;*/
+/*  border-radius: 10px;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*  background: #1E2139;*/
+/*}*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ag-root-wrapper-body.ag-layout-normal {
+  height: auto !important;
+}
+
+.sales-table .ag-row-last[aria-expanded=true] {
+  display: none;
+}
+.organic-table .ag-row-last[aria-expanded=true] {
+  display: none;
+}
+.organic-table .ag-body {
+  max-height: 120px;
+  overflow-y: hidden;
+}
+
+.Toastify__toast-container {
+  z-index: 1000000;
+}
