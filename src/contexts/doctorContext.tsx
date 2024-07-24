@@ -5,10 +5,14 @@ const DoctorContext = React.createContext({} as IDoctorContext);
 
 function DoctorProvider(props: PropsWithChildren) {
   const [doctors, setDoctors] = useState<IDoctor[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch(import.meta.env.VITE_API_URL).then(res => res.json()).then((doctors) => {
       setDoctors(doctors);
+    }).finally(() => {
+      setLoading(false);
     });
   }, []);
 
@@ -16,6 +20,7 @@ function DoctorProvider(props: PropsWithChildren) {
     <DoctorContext.Provider
       value={{
         doctors,
+        loading,
       }}
       {...props}
     />

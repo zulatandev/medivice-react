@@ -10,4 +10,5 @@ export interface IDoctor {
 
 export interface IDoctorContext {
   doctors: IDoctor[];
+  loading: boolean;
 }
